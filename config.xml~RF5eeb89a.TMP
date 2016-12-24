@@ -1,11 +1,11 @@
 <?xml version="1.0 "?>
 <config>
   <createSiteCollection>
-    <Antragsseite>https://portal.contoso.de/sites/AdminCenter</Antragsseite>
+    <Antragsseite>https://portal.warnckeweb.de/sites/AdminCenter</Antragsseite>
     <site>
       <themename>colaboration</themename>
       <logofile>logo_grey.jpg</logofile>
-      <colorfile>contoso.spcolor</colorfile>
+      <colorfile>Warnckeweb.spcolor</colorfile>
       <fontfile>Arial.spfont</fontfile>
       <masterpage>seattle.master</masterpage>
       <Features>
@@ -20,7 +20,7 @@
           <Default>Portal</Default>
           <CHOICES>
             <CHOICE>Portal</CHOICE>
-            <CHOICE>Portal2</CHOICE>
+            <CHOICE>GLPortal</CHOICE>
             <CHOICE>Projekte</CHOICE>
           </CHOICES>
         </Field>
@@ -40,7 +40,7 @@
     <Taskconfig>
       <Taskname Value="Create SharePoint Sites" />
       <!-- Password will be cleared by Install Script -->
-      <TaskUser Username="contoso\svc-sp-farm-01001" TaskPW="cleared" />
+      <TaskUser Username="corp\svc-sp-farm-01001" TaskPW="cleared" />
       <Taskruntime Value="19PM" />
       <RunningDays Value="Monday,Tuesday,Wednesday,Thursday,Friday" />
       <!-- in AM oR PM -->
@@ -48,10 +48,10 @@
   </createSiteCollection>
   <MonitorSiteCollections>
     <SpMonitoredWebapplications>
-      <SpWebapplication Name="Portal" URL="https://portal.contoso.de" />
-      <SpWebapplication Name="Mysite" URL="https://mysites.contoso.de/" />
+      <SpWebapplication Name="Portal" URL="https://portal.warnckeweb.de" />
+      <SpWebapplication Name="Mysite" URL="https://mysites.warnckeweb.de/" />
     </SpMonitoredWebapplications>
-    <SpSitecollection URL="https://portal.contoso.de/sites/AdminCenter" />
+    <SpSitecollection URL="https://portal.warnckeweb.de/sites/AdminCenter" />
     <SpListconfig>
       <SPLists>
         <SPList Name="Monitor Portal Sitecollections" AssosiatedWebapp="Portal" />
@@ -76,22 +76,22 @@
     <Taskconfig>
       <Taskname Value="Monitor SharePoint Sites" />
       <!-- Password will be cleared by Install Script -->
-      <TaskUser Username="contoso\svc-sp-farm-01001" TaskPW="cleared" />
+      <TaskUser Username="corp\svc-sp-farm-01001" TaskPW="cleared" />
       <Taskruntime Value="2AM" />
       <RunningDays Value="Monday,Tuesday,Wednesday,Thursday,Friday" />
       <!-- in AM oR PM -->
     </Taskconfig>
   </MonitorSiteCollections>
   <controlContendDBs>
-    <Mailconfig sender="SPAdminmail@contoso.de" receipient="florian.warncke@contoso.de" mailserver="mail.contoso.com" />
+    <Mailconfig sender="SPAdminmail@warnckeweb.de" receipient="florian.warncke@warnckeweb.de" mailserver="mail.warnckeweb.com" />
     <Webapplications>
-      <Webapplication name="Portal" ContentDBprefix="Prod_Content_Portal_" Warningcount="80" MAXDBcount="50" />
+      <Webapplication name="Portal" ContentDBprefix="Prod_Content_kit_" Warningcount="80" MAXDBcount="50" />
       <Webapplication name="Mysites" ContentDBprefix="Prod_Content_MySites_" Warningcount="25" MAXDBcount="500" />
     </Webapplications>
     <Taskconfig>
       <Taskname Value="Controll Content DB" />
       <!-- Password will be cleared by Install Script -->
-      <TaskUser Username="contoso\svc-sp-farm-01001" TaskPW="cleared" />
+      <TaskUser Username="corp\svc-sp-farm-01001" TaskPW="cleared" />
       <Taskruntime Value="3AM" />
       <RunningDays Value="Monday,Tuesday,Wednesday,Thursday,Friday" />
       <!-- in AM oR PM -->
