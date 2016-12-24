@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Templates>
+    <List Title="Projektdokumente" TemplateFileName="Projektdokumente.stp" />
+    <List Title="Projektablauf" TemplateFileName="Projektablauf.stp" />
+    <List Title="Offene Punkte Liste" TemplateFileName="OffenePunkteListe.stp" />
+    <List Title="Diskussionsforum" TemplateFileName="Diskussionsforum.stp" />
+    <Document Title="" TemplateFileName="" AssociatedList="" />
+    <Document Title="" TemplateFileName="" AssociatedList="" />
+    <Document Title="" TemplateFileName="" AssociatedList="" />
+    <Document Title="" TemplateFileName="" AssociatedList="" />
+  </Templates>
+  <SourceSite>https://portal.contoso.de/sites/PMSTemplate</SourceSite>
+</config>
